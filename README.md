@@ -2,17 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
-#How to use it
+# How to
 ## Development server
 
 Run 
 ```console
 wilder$ ng serve
 ```
-or
+or you can add a `-o` or `--open` to open the navigator directely 
 ```console
-wilder$ ng s
+wilder$ ng s -o
 ```
+
  for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
