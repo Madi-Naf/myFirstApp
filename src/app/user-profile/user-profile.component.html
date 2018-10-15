@@ -1,0 +1,33 @@
+<div class="container" style="text-align: center" >
+  <div class="row">
+    <div class="col-10">
+      <div class="card" style="width: 25rem;">
+          <img class="card-img-top" src={{User.photo}} alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Nom : {{User.name}}</h5>
+            <h5 class="card-title">Prenom :  {{User.firstName}}</h5>
+          </div>
+
+          <div class="card" style="width: 25rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    <h5 class="card-title">{{User.quote}} </h5>
+                    <form class="col-12">
+                        <div class="form-group">
+                          <input [(ngModel)]="User.quote" type="text" name="quote"  
+                                  placeholder="Ex: momojoue@league.un"
+                                  class="form-control">
+                        </div>
+                    </form>
+                </li>
+
+                <li class="list-group-item">
+                  <h3 class={{classHidden}}> Age : {{User.age}} </h3>
+                  <button (click)="isHidden()" class="btn btn-info">Masquer/Afficher : Ager</button>
+                </li>
+              </ul>
+          </div>
+    </div>
+        </div>
+  </div>
+</div>
