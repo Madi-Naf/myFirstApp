@@ -14,12 +14,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 
 //J'importe mon tableau de type Route
 import { ROUTES } from './app.routes';
+import { MovieComponent } from './movie/movie.component';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     UserProfileComponent,
-    NavbarComponent
+    NavbarComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,

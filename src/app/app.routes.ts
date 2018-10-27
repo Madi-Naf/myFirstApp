@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { MovieComponent } from './movie/movie.component';
 
 const ROUTES: Routes = [
     { path: '',
@@ -13,7 +14,12 @@ const ROUTES: Routes = [
     },
     { path: 'sign-up',
      component: SignUpComponent
-     ,pathMatch: 'full'}
+     ,pathMatch: 'full'},
+     {
+       path: 'movie',
+       component: MovieComponent,
+       pathMatch: 'full'
+     }
 ];
 
 export { ROUTES };

@@ -1,0 +1,33 @@
+.content-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.movies-list{
+    list-style: none;
+}
+.movie{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+/* ================================== \
+    The first movie class pro
+\  ==================================*/
+
+.fisrt-movie:hover{
+    background: rgb(227,23,23);
+    color: whitesmoke;
+}
+/* ================================== \
+    btn & showMovie variable
+\  ==================================*/
+.red-class{
+    color: red !important;
+    font-size: 1.5 em;
+    font-weight: bold;
+}
+.green-class{
+    color: green !important;
+    font-size: 1.5 em;
+    font-weight: bold;
+}

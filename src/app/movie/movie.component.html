@@ -1,0 +1,44 @@
+<div class="container">
+	<div class="row">
+		<div class="col-8">
+			<h5 class="title">
+				Click sur le boutton Show Movies pour changer la valeur de la variable "showMovies"!
+			</h5>
+			<p>
+				Actuellemnt la varible showMovies vaut : 
+				<span class={{redOrGreen}}>{{showMovies}}  </span>
+			</p>
+		</div>
+		<div class="col-4">
+			<button class="btn btn-info"
+					(click) = "getShowMovies()">
+				Show Movies
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="container content-center">
+	<div class="row">
+		<div *ngIf="showMovies" class="col-9" >
+			<ul class="movies-list">
+
+				<li *ngFor="let currentMovie of allMovies; let i = index" [attr.data-index] = "i"
+					class="movie">
+
+					<div class="card fisrt-movie" style="width: 30em;">
+						<img class="card-img-top" src={{currentMovie.img}} alt="Card image cap">
+
+						<div class="card-body">
+							<h5 class="card-title">Titre: {{currentMovie.title}}</h5>
+							<p class="card-text"> Année: {{currentMovie.year}} </p>
+						</div>
+
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
