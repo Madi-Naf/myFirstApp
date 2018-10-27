@@ -23,10 +23,10 @@
 		<div *ngIf="showMovies" class="col-9" >
 			<ul class="movies-list">
 
-				<li *ngFor="let currentMovie of allMovies; let i = index" [attr.data-index] = "i"
-					class="movie">
+				<li *ngFor="let currentMovie of allMovies; let i = index" [attr.data-index] = "i">
 
-					<div class="card fisrt-movie" style="width: 30em;">
+					<div class="card" style="width: 30em;"
+					[ngClass]="{'fisrt-movie':currentMovie.title === 'saw I'}">
 						<img class="card-img-top" src={{currentMovie.img}} alt="Card image cap">
 
 						<div class="card-body">
@@ -35,10 +35,10 @@
 						</div>
 
 					</div>
-
 				</li>
 
 			</ul>
 		</div>
 	</div>
 </div>
+

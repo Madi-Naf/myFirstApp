@@ -6,9 +6,9 @@
 .movies-list{
     list-style: none;
 }
-.movie{
-    margin-top: 2em;
-    margin-bottom: 2em;
+.card{
+    margin-top: 2em !important;
+    margin-bottom: 2em !important;
 }
 /* ================================== \
     The first movie class pro
@@ -16,7 +16,7 @@
 
 .fisrt-movie:hover{
     background: rgb(227,23,23);
-    color: whitesmoke;
+    color: ;
 }
 /* ================================== \
     btn & showMovie variable
