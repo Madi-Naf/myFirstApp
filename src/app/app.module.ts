@@ -15,13 +15,17 @@ import { NavbarComponent } from './navbar/navbar.component';
 //J'importe mon tableau de type Route
 import { ROUTES } from './app.routes';
 import { MovieComponent } from './movie/movie.component';
+import { HightlightDirective } from './hightlight.directive';
+import { DisplayMoviesDirective } from './display-movies.directive';
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     UserProfileComponent,
     NavbarComponent,
-    MovieComponent
+    MovieComponent,
+    HightlightDirective,
+    DisplayMoviesDirective
   ],
   imports: [
     BrowserModule,
