@@ -2,7 +2,7 @@
 Wild code school
 
 ## Quête 00 : Start with Angular 
-### Comment crée une aplication Angular ?
+### Comment crée une application Angular ?
 Ouvrez un Terminal et executé la commande suivante :
 
 ```console
@@ -22,7 +22,7 @@ Une fois dans le dossier executé la commande suivante :
 ```
 vous pouvez ajouter  `-o` ou `--open` pour ouvrir le navigateur automatiquement dès que le serveur est lancé.
 ```console
-@wilder: Document~$ ng s -o
+@wilder: Document/myFirstApp~$ ng s -o
 ```
 Sinon vous pouvez ouvrir le navogateur et aller à l'adresse suivante `http://localhost:4200/`. 
 Normalement la page est rafrachi automatiquement dès que l'on modifie un fichier.
