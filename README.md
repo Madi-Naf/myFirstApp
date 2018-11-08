@@ -70,7 +70,7 @@ export class BartProfilComponent implements OnInit {
 
 }
 ```
-Dans mon fichier `parent.component.html` 
+Dans mon fichier `bart-profil.component.html` 
 ```html 
 <p>
   <img [src]="imageSrc" [alt]="bartName" />
@@ -87,7 +87,7 @@ Ce qui va donner le resultat suivant :
 
 ### Le binding d'événements
 ### Passer de l'information du HTML vers le TS.
-Dans mon fichier `parent.component.ts` 
+Dans mon fichier `bart-profil.component.ts` 
 ```ts
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -112,7 +112,7 @@ export class BartProfilComponent implements OnInit {
 
 } 
 ```
-Dans mon fichier `parent.component.html` 
+Dans mon fichier `bart-profil.component.html` 
 ```html 
 <p>
   <img [src]="imageSrc" [alt]="bartName" />
@@ -151,7 +151,7 @@ import { BartProfilComponent } from '.bart-profil/bart-profil.component';
 export class AppModule { }
 ```
 
-Dans mon fichier `parent.component.html` 
+Dans mon fichier `bart-profil.component.html` 
 ```html 
 <p>
   <img [src]="imageSrc" [alt]="bartName" />
