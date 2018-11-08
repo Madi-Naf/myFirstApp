@@ -173,7 +173,7 @@ De quoi est composé une route?
 - `component` : c'est le composant que vous voulez afficher pour le path: 'contact', exemple : ContactComponent
 - `pathMatch: "full"`  qui est optionnel, qui permet dire qu'il possible d'aacéder un page 
 seulemeent si l'url est exactement la même que celle renseigner dnas `path`. 
->> Exemple d'un cas `pathMatch: "full"` :
+	- Exemple d'un cas `pathMatch: "full"` :
 	   si 
 	    ```ts
 	    	 	path: "/contact";
