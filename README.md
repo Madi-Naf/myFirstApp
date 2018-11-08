@@ -47,7 +47,7 @@ et des methodes que l'on peut utiliser sur la vue
 ### Faire passer une variable d'un composant un autre
 Exemple : dans mon composant  `parent.component`  et  `child.component`
 
-```
+```js
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-parent',
