@@ -42,14 +42,14 @@ et des methodes que l'on peut utiliser sur la vue
 
 `component.css` pour le style 
 
-## Quête 02 : Le Binding
+## Quête 02 : Le Binding 
 ### Le binding de proporiété
 ### Faire passer une variable d'un composant un autre
 Exemple :
 	Je souhaite injécter le nom de Bart dans l'attribut  `alt` de son portrait.
 	ici nous allons travailler dans le composant ` bart-profil.component` 
 
-
+Dans mon ` bart-profil.component.ts` 
 ```js
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -59,7 +59,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BartProfilComponent implements OnInit {
 
-  bartName = "Bart";
+  public bartName: string = "Bart";
 
   imageSrc = "https://via.placeholder.com/350x150";
 
@@ -85,8 +85,46 @@ Ce qui va donner le resultat suivant :
   Name : Bart
 </p>
 ```
-================================
 
+### Le binding d'événements
+### Passer de l'information du HTML vers le TS.
+
+```ts
+import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'app-bart-profil',
+  templateUrl: './bart-profil.component.html',
+  styleUrls: ['./bart-profil.component.css']
+})
+export class BartProfilComponent implements OnInit {
+
+  public bartName:string = "Bart";
+
+  imageSrc = "https://via.placeholder.com/350x150";
+
+  constructor() { }
+
+  ngOnInit() {
+
+  	sayHello() {
+    	console.log("Hello " + this.bartName + " !");
+  	}
+  }
+
+} 
+```
+Dans mon fichier `parent.component.html` 
+
+```html 
+<p>
+  <img [src]="imageSrc" [alt]="bartName" />
+  Name : {{bartName}} 
+</p>
+
+<button (click)="sayHello()">
+```
+
+======================================================================
 D'autre type de composant : 
 
 ```console
