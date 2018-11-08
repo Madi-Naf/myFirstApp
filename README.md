@@ -45,18 +45,21 @@ et des methodes que l'on peut utiliser sur la vue
 ## Quête 02 : Le Binding
 ### Le binding de proporiété
 ### Faire passer une variable d'un composant un autre
-Exemple : dans mon composant  `parent.component`  et  `child.component`
+Exemple :
+	Je souhaite injécter le nom de Bart dans l'attribut  `alt` de son portrait.
+	ici nous allons travailler dans le composant ` bart-profil.component` 
+
 
 ```js
 import { Component, OnInit } from '@angular/core';
 @Component({
-  selector: 'app-parent',
-  templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  selector: 'app-bart-profil',
+  templateUrl: './bart-profil.component.html',
+  styleUrls: ['./bart-profil.component.css']
 })
-export class ParentComponent implements OnInit {
+export class BartProfilComponent implements OnInit {
 
-  totoName : string = "Toto";
+  bartName = "Bart";
 
   imageSrc = "https://via.placeholder.com/350x150";
 
@@ -65,9 +68,23 @@ export class ParentComponent implements OnInit {
   ngOnInit() {
   }
 
-} 
+}
 ```
+Dans mon fichier `parent.component.html` 
 
+```html 
+<p>
+  <img [src]="imageSrc" [alt]="bartName" />
+  Name : {{bartName}} 
+</p>
+```
+Ce qui va donner le resultat suivant : 
+```html 
+<p>
+  <img [src]="imageSrc" [alt]="Bart" />
+  Name : Bart
+</p>
+```
 ================================
 
 D'autre type de composant : 
