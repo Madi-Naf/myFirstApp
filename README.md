@@ -50,7 +50,7 @@ Exemple :
 	ici nous allons travailler dans le composant ` bart-profil.component` 
 
 Dans mon ` bart-profil.component.ts` 
-```js
+```ts
 import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-bart-profil',
@@ -71,7 +71,6 @@ export class BartProfilComponent implements OnInit {
 }
 ```
 Dans mon fichier `parent.component.html` 
-
 ```html 
 <p>
   <img [src]="imageSrc" [alt]="bartName" />
@@ -88,7 +87,7 @@ Ce qui va donner le resultat suivant :
 
 ### Le binding d'événements
 ### Passer de l'information du HTML vers le TS.
-
+Dans mon fichier `parent.component.ts` 
 ```ts
 import { Component, OnInit } from '@angular/core';
 @Component({
@@ -114,7 +113,6 @@ export class BartProfilComponent implements OnInit {
 } 
 ```
 Dans mon fichier `parent.component.html` 
-
 ```html 
 <p>
   <img [src]="imageSrc" [alt]="bartName" />
@@ -123,9 +121,51 @@ Dans mon fichier `parent.component.html`
 
 <button (click)="sayHello()">
 ```
+### Le binding two-way
+### Récupérer de l'information dansle fichier HTML à partir du fichier TS.
+Dans mon fichier `app.module.ts`
+Pour ce faire nous allons commencer par importer le module suivant `FormsModule` .
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+// Importation du NgModule
+import { NgModule } from '@angular/core';
 
-======================================================================
-D'autre type de composant : 
+// Importation du FormsModule
+import { FormsModule } from '@angular/forms';
+
+import { AppComponent } from './app.component';
+import { BartProfilComponent } from '.bart-profil/bart-profil.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    BartProfilComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule // Ajoute le ici aussi 
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Dans mon fichier `parent.component.html` 
+```html 
+<p>
+  <img [src]="imageSrc" [alt]="bartName" />
+  Name : {{bartName}} 
+</p>
+
+<button (click)="sayHello()">
+
+<input [(ngModel)]="bartName">
+```
+Désormais, à la saisie dans le champ input, le nom de Bart sera changé dynamiquement.
+
+======================= D'autre type de composant =======================
+ 
 
 ```console
 @wilder: Document/myFirstApp~$ ng generate directive directiveName
