@@ -169,12 +169,12 @@ Une route en Angular c'est une partie de l'url. Si on prend cette url comme exem
 
 De quoi est composé une route?
 > Une route est composée de plusieurs propriétés, dont :
-	>> `path`  : qui correspond à l'url, par exemple contact
-	>> `component` : c'est le composant que vous voulez afficher pour le path: 'contact', exemple : ContactComponent
-	>> `pathMatch: "full"`  qui est optionnel, qui permet dire qu'il possible d'aacéder un page 
+	1. `path`  : qui correspond à l'url, par exemple contact
+	2. `component` : c'est le composant que vous voulez afficher pour le path: 'contact', exemple : ContactComponent
+	3. `pathMatch: "full"`  qui est optionnel, qui permet dire qu'il possible d'aacéder un page 
 	seulemeent si l'url est exactement la même que celle renseigner dnas `path`. 
 	>> Exemple d'un cas `pathMatch: "full"` :
-	   >>> si 
+	   si 
 	    ```ts
 	    	 	path: "/contact";
 	    	 ```
