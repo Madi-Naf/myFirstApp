@@ -1,18 +1,31 @@
-# My First Angular App
+# Quête Angular 
+Wild code school
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
+## Quête 00 : Start with Angular 
+### Comment crée une aaplicationj Angular ?
+Ouvrez un Terminal et executé la commande suivante :
 
-# How to
-### Development server
-Run 
+```console
+@wilder:$ ng new myFirstApp
+```
+Puis 
+```console
+@wilder:$ cd myFirstApp
+```
+pour ce placer dnas le dossier de l'application.
+
+### Comment lancer le serveur ?
+Ouvrez un Terminal et executé la commande suivante :
+
 ```console
 @wilder:$ ng serve
 ```
-or you can add a `-o` or `--open` to open the navigator directely 
+vous pouvez ajouter  `-o` ou `--open` pour ouvrir le navigateur automatiquement dès que le serveur est lancé.
 ```console
 @wilder:$ ng s -o
 ```
- for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Sinon vous pouvez ouvrir le navogateur et aller à l'adresse suivante `http://localhost:4200/`. 
+Normalement la page est rafrachi automatiquement dès que l'on modifie un fichier.
 
 ### Code scaffolding
 Run 
