@@ -163,6 +163,36 @@ Dans mon fichier `bart-profil.component.html`
 <input [(ngModel)]="bartName">
 ```
 Désormais, à la saisie dans le champ input, le nom de Bart sera changé dynamiquement.
+## Quête 03 : Le Router 
+### Qu'est-ce qu'une route ?
+Une route en Angular c'est une partie de l'url. Si on prend cette url comme exemple : `https://angular.io/guide/router` , la route pour afficher la page est "/guide/router".
+
+De quoi est composé une route?
+Une route est composée de plusieurs propriétés, dont :
+	-`path`  : qui correspond à l'url, par exemple contact
+	-`component` : c'est le composant que vous voulez afficher pour le path: 'contact', exemple : ContactComponent
+	-`pathMatch: "full"`  qui est optionnel, qui permet dire qu'il possible d'aacéder un page 
+	seulemeent si l'url est exactement la même que celle renseigner dnas `path`. 
+	-Exemple d'un cas `pathMatch: "full"` :
+	    - si 
+	    ```ts
+	    	 	path: "/contact";
+	    	 ```
+
+	    Alors la bonne url est la suivante  `https://home/contact`
+	    mauvaise url `https://home/anotherpage/contact`
+
+Exemple d'une route :
+```ts
+	[...]
+
+		{ 
+		  path: 'contact', 
+		  component: ContactComponent 
+		},
+
+	[...]
+```
 
 ======================= D'autre type de composant =======================
  
