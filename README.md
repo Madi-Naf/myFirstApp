@@ -42,7 +42,33 @@ et des methodes que l'on peut utiliser sur la vue
 
 `component.css` pour le style 
 
+## Quête 02 : Le Binding
+### Le binding de proporiété
+### Faire passer une variable d'un composant un autre
+Exemple : dans mon composant  `parent.component`  et  `child.component`
 
+```
+import { Component, OnInit } from '@angular/core';
+@Component({
+  selector: 'app-parent',
+  templateUrl: './parent.component.html',
+  styleUrls: ['./parent.component.css']
+})
+export class ParentComponent implements OnInit {
+
+  totoName : string = "Toto";
+
+  imageSrc = "https://via.placeholder.com/350x150";
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+} 
+```
+
+================================
 
 D'autre type de composant : 
 
